@@ -9,11 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     
-    
-    
     @StateObject var viewModel = GameViewModel()
-    
-    
     
     var body: some View {
         ZStack {
@@ -24,9 +20,18 @@ struct GameView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                 QuestionView(question: viewModel.currentQuestion)
+                
             }
+            .foregroundColor(.white)
+            .navigationBarHidden(true)
+            .environmentObject(viewModel)
         }
-        .foregroundColor(.white)
+        .background(
+            NavigationLink(destination: ScoreView(viewModel: ScoreViewModel(correctGuesses: viewModel.correctGuesses,
+                incorrectGuesses: viewModel.incorrectGuesses)),
+                           isActive: .constant(viewModel.gameIsOver),
+                           label: { EmptyView() })
+        )
     }
 }
 

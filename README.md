@@ -1,3 +1,7 @@
-**Firsty**
+<p align="center"> <b>Firsty</b> </p> 
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
+
+
+<img src="https://myoctocat.com/assets/images/base-octocat.svg" width="100">

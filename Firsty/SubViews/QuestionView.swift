@@ -27,6 +27,7 @@ struct QuestionView: View {
                     }) {
                         ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                             .background(viewModel.color(forOptionIndex: answerIndex))
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                     .disabled(viewModel.guessWasMade)
                 }

@@ -69,6 +69,16 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		BF8B28B72994AE9E008F4F23 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFFE4BD4298F3C3900923072 /* WelcomeBottomTextView.swift */,
+				BF68BB76298C3DFE007B3B7D /* ChoiceTextView.swift */,
+				BF0BEC4C298F5E6600991A2A /* QuestionView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		BFB30DFB298EC803004136A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +93,6 @@
 			children = (
 				BFFE4BD2298F38AB00923072 /* WelcomeView.swift */,
 				BFEAEE072984C00A00412D6B /* GameView.swift */,
-				BFFE4BD4298F3C3900923072 /* WelcomeBottomTextView.swift */,
-				BF68BB76298C3DFE007B3B7D /* ChoiceTextView.swift */,
-				BF0BEC4C298F5E6600991A2A /* QuestionView.swift */,
 				BF2D58B32990171200C4CE8C /* ScoreView.swift */,
 			);
 			path = Views;
@@ -112,6 +119,7 @@
 			children = (
 				BFEAEE052984C00A00412D6B /* FirstyApp.swift */,
 				BFB30DFC298EC839004136A5 /* Views */,
+				BF8B28B72994AE9E008F4F23 /* SubViews */,
 				BFB30DFB298EC803004136A5 /* Models */,
 				BF0BEC4B298F5B1D00991A2A /* VM */,
 				BF4331DD298F21EB00D018B1 /* Misc */,

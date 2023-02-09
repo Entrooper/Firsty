@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameView: View {
-    
     @StateObject var viewModel = GameViewModel()
     
     var body: some View {
@@ -20,6 +19,7 @@ struct GameView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                 QuestionView(question: viewModel.currentQuestion)
+                    .padding()
                 
             }
             .foregroundColor(.white)
@@ -28,7 +28,7 @@ struct GameView: View {
         }
         .background(
             NavigationLink(destination: ScoreView(viewModel: ScoreViewModel(correctGuesses: viewModel.correctGuesses,
-                incorrectGuesses: viewModel.incorrectGuesses)),
+                                                                            incorrectGuesses: viewModel.incorrectGuesses)),
                            isActive: .constant(viewModel.gameIsOver),
                            label: { EmptyView() })
         )
@@ -36,7 +36,7 @@ struct GameView: View {
 }
 
 
-struct GameView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
     }

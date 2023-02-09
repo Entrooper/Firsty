@@ -10,7 +10,6 @@ import SwiftUI
 struct ChoiceTextView: View {
     // MARK: - PROPS
     let choiceText: String
-    let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
     
     // MARK: - BODY
     var body: some View {
@@ -19,7 +18,11 @@ struct ChoiceTextView: View {
             .bold()
             .multilineTextAlignment(.center)
             .padding()
-            .border(GameColor.accent, width: 4)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(GameColor.accent, lineWidth: 3)
+            )
+        
     }
 }
 

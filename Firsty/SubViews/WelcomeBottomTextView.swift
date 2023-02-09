@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeBottomTextView: View {
     let str: String
- 
+    
     var body: some View {
         HStack {
             Spacer()
@@ -18,7 +18,9 @@ struct WelcomeBottomTextView: View {
                 .bold()
                 .padding()
             Spacer()
-        }.background(GameColor.accent)
+        }
+        .background(GameColor.accent)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 

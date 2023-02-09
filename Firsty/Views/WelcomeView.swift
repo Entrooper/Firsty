@@ -26,6 +26,7 @@ struct WelcomeView: View {
                         destination: GameView(),
                         label: {
                             WelcomeBottomTextView(str: "Okay let's go!")
+                                .padding(.horizontal)
                         })
                 }
                 .foregroundColor(.white)
